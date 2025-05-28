@@ -1,0 +1,43 @@
+<h3>Episodios Ricky y Morty</h3>
+<div>
+    <div>
+        Episodios
+        Listado
+    </div>
+</div>
+<hr>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>Air Date</th>
+                <th>Episode</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let episode of episodeList">
+                <td>{{ episode.id }}</td>
+                <td>{{ episode.name }}</td>
+                <td>{{episode.air_date}}</td>
+                <td>{{episode.episode}}</td>
+                <td>
+                    <div class="dropdown">
+                        <button (click)="getCharacters(episode)">Characters</button>
+                        <div class="dropdown-options">
+                            <table class="w-100">
+                                <thead>Character Photo</thead>
+                                <tr *ngFor="let character of characterList">
+                                    <img src="{{character.image}}" alt="" width="50px">
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
