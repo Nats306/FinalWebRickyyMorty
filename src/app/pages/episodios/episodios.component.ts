@@ -49,15 +49,4 @@ export class EpisodiosComponent {
     });
   }
 
-  activeEpisodeId: number | null = null;
-
-  onCharactersClick(episode: any) {
-    if (this.activeEpisodeId === episode.id) {
-      this.activeEpisodeId = null; // Cierra si ya está abierto
-    } else {
-      this.activeEpisodeId = episode.id;
-      this.getCharacters(episode);
-    }
-  }
-
 }
